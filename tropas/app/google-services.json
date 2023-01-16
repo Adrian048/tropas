@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "772462833281",
+    "project_id": "tropas-399d6",
+    "storage_bucket": "tropas-399d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772462833281:android:21319eab98de1319262780",
+        "android_client_info": {
+          "package_name": "com.actividad.tropas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772462833281-pqt6k70kekt521bmq0l2cd5d21lmlrbm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvRjI6dZIwy5lxN8YI4OYGBGt_La5Dz9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772462833281-pqt6k70kekt521bmq0l2cd5d21lmlrbm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
