@@ -19,7 +19,6 @@ fun Modificartropas(navController: NavHostController) {
     val db = FirebaseFirestore.getInstance()
 
     var nombre_coleccion = "tropas"
-    var id by remember { mutableStateOf("") }
     var nombre_tropa by remember { mutableStateOf("") }
     var espacio_tropa by remember { mutableStateOf("") }
     var nivel_tropa by remember { mutableStateOf("") }
@@ -58,7 +57,7 @@ fun Modificartropas(navController: NavHostController) {
             OutlinedTextField(
                 value = nombre_tropa,
                 onValueChange = { nombre_tropa = it },
-                label = { Text("Nombre") },
+                label = { Text("nombre") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -67,7 +66,7 @@ fun Modificartropas(navController: NavHostController) {
                 value = espacio_tropa,
 
                 onValueChange = { espacio_tropa = it },
-                label = { Text("Espacio") },
+                label = { Text("espacio") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -78,7 +77,7 @@ fun Modificartropas(navController: NavHostController) {
             OutlinedTextField(
                 value = nivel_tropa,
                 onValueChange = { nivel_tropa = it },
-                label = { Text("Nivel") },
+                label = { Text("nivel") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -88,7 +87,7 @@ fun Modificartropas(navController: NavHostController) {
             OutlinedTextField(
                 value = danio_tropa,
                 onValueChange = { danio_tropa = it },
-                label = { Text("Daño/segundo") },
+                label = { Text("daño/segundo") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -98,7 +97,7 @@ fun Modificartropas(navController: NavHostController) {
             OutlinedTextField(
                 value = vida_tropa,
                 onValueChange = { vida_tropa = it },
-                label = { Text("Vida") },
+                label = { Text("vida") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -106,12 +105,11 @@ fun Modificartropas(navController: NavHostController) {
             Spacer(modifier = Modifier.size(10.dp))
 
             val dato = hashMapOf(
-                "Nombre" to id.toString(),
-                "Nombre" to nombre_tropa.toString(),
-                "Espacio" to espacio_tropa.toString(),
-                "Nivel" to nivel_tropa.toString(),
-                "Daño" to danio_tropa.toString(),
-                "Vida" to vida_tropa.toString()
+                "nombre" to nombre_tropa.toString(),
+                "espacio" to espacio_tropa.toString(),
+                "nivel" to nivel_tropa.toString(),
+                "danio" to danio_tropa.toString(),
+                "vida" to vida_tropa.toString()
 
             )
 
@@ -121,7 +119,7 @@ fun Modificartropas(navController: NavHostController) {
 
                 onClick = {
                     db.collection(nombre_coleccion)
-                        .document(id)
+                        .document(nombre_tropa)
                         .set(dato)
                         .addOnSuccessListener {
                             mensaje_confirmacion ="Datos guardados correctamente"

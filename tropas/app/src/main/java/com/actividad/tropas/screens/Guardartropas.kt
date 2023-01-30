@@ -56,7 +56,7 @@ fun Guardartropas(navController: NavHostController) {
             OutlinedTextField(
                 value = nombre_tropa,
                 onValueChange = { nombre_tropa = it },
-                label = { Text("Nombre") },
+                label = { Text("nombre") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -66,7 +66,7 @@ fun Guardartropas(navController: NavHostController) {
             OutlinedTextField(
                 value = espacio_tropa,
                 onValueChange = { espacio_tropa = it },
-                label = { Text("Espacio") },
+                label = { Text("espacio") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -77,7 +77,7 @@ fun Guardartropas(navController: NavHostController) {
                 value = nivel_tropa,
 
                 onValueChange = { nivel_tropa = it },
-                label = { Text("Nivel") },
+                label = { Text("nivel") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -89,7 +89,7 @@ fun Guardartropas(navController: NavHostController) {
             OutlinedTextField(
                 value = danio_tropa,
                 onValueChange = { danio_tropa = it },
-                label = { Text("Daño/segundo") },
+                label = { Text("daño/segundo") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -99,7 +99,7 @@ fun Guardartropas(navController: NavHostController) {
             OutlinedTextField(
                 value = vida_tropa,
                 onValueChange = { vida_tropa = it },
-                label = { Text("Vida") },
+                label = { Text("vida") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
             )
@@ -109,7 +109,7 @@ fun Guardartropas(navController: NavHostController) {
                 "nombre" to nombre_tropa.toString(),
                 "espacio" to espacio_tropa.toString(),
                 "nivel" to nivel_tropa.toString(),
-                "daño/segundo" to danio_tropa.toString(),
+                "danio" to danio_tropa.toString(),
                 "vida" to vida_tropa.toString()
             )
 

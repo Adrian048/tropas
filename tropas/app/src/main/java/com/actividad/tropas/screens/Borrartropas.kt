@@ -19,7 +19,7 @@ fun Borrartropas(navController: NavHostController) {
     val db = FirebaseFirestore.getInstance()
 
     var nombre_coleccion = "tropas"
-    var id by remember { mutableStateOf("") }
+    var nombre_tropa by remember { mutableStateOf("") }
 
 
     Card(
@@ -51,8 +51,8 @@ fun Borrartropas(navController: NavHostController) {
             Spacer(modifier = Modifier.size(10.dp))
 
             OutlinedTextField(
-                value = id,
-                onValueChange = { id = it },
+                value = nombre_tropa,
+                onValueChange = { nombre_tropa = it },
                 label = { Text("Introduce el nombre borrar") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
@@ -65,17 +65,17 @@ fun Borrartropas(navController: NavHostController) {
             Button(
 
                 onClick = {
-                    if (id.isNotBlank()) {
+                    if (nombre_tropa.isNotBlank()) {
                         db.collection(nombre_coleccion)
-                            .document(id)
+                            .document(nombre_tropa)
                             .delete()
                             .addOnSuccessListener {
                                 mensaje_borrado = "Datos borrados correctamente"
-                                id = ""
+                                nombre_tropa = ""
                             }
                             .addOnFailureListener {
                                 mensaje_borrado = "No se ha podido borrar"
-                                id = ""
+                                nombre_tropa = ""
                             }
                     }
                 },

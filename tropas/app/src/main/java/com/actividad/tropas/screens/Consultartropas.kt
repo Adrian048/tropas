@@ -49,7 +49,7 @@ fun Consultartropas(navController: NavHostController) {
 
 
         var nombre_busqueda by remember { mutableStateOf("") }
-        val field_busqueda ="nif"
+        val field_busqueda ="nombre"
         OutlinedTextField(
             value = nombre_busqueda,
             onValueChange = { nombre_busqueda = it },
